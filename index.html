@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="view port" content="width-device-width,initial-scale1.0">
+        <title>popup</title>
+     <link rel="stylesheet" href="style8.css">
+       
+           
+           
+    </head>
+    <body>
+        <div class="container">
+            <button type="submit" class="btn" onclick="openPopup()"> submit</button>
+            <div class="popup" id="popup">
+                <h2>Thank you!</h2>
+                <p> your shopping details has been successfully submitted.Thanks!</p>
+                <button type="button" onclick="closePopup()">ok</button>
+            </div>
+        </div>
+        <h1>array</h1>
+        <div id="store"></div>
+
+        <script>
+            let popup =document.getElementById("popup");
+            function openPopup(){
+                popup.classList.add("open-popup");
+            }
+                function closePopup(){
+                    popup.classList.remove("open-popup");
+
+                }
+          //  const vegetables=["beetroot","carrot","cabbage"," eggplant"];
+//const color=["red","orange","greenyellow","violet"]
+    // document.getElementById("store").innerHTML=vegetables.join("<br><br>");
+      const vegetables=[
+        {
+            "name":"beetroot",
+            "color":"red"
+        },
+        {
+           "name":"carrot",
+            "color":"orange"
+        },
+        {
+           "name":"cabbage",
+           "color":"greenyellow"
+        },
+
+       {
+           "name":"eggplant",
+            "color":"voilet"
+        }
+    ]
+
+
+let text="";
+
+for
+( let i=0; i < vegetables.length;i++){
+   text += "<li style='color:"+vegetables[i].color+"'>" +vegetables[i].name+"<li>";
+}
+document.getElementById("store").innerHTML=text;
+
+
+</script>
+    </body>
+</html>
