@@ -12,8 +12,9 @@
     background-color:#fff(50, 150, 41);
     display: flex;
     align-items: center;
-justify-content: center;
+    justify-content: center;
 }
+
 .btn{
     padding: 10px 50px;
     background-color: #cbc2bb;
