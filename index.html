@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+ 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -9,64 +10,20 @@
     <title>Carousel Template · Bootstrap v5.2</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
-
-    
-
-    
-
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="style9.css" rel="stylesheet">
+</head>
 <body>
-  <style>
-    .myClass {
-      color: white;
-      background-color:palevioletred;
-      padding: 20px;
-      text-align: center;
-      margin: 10px;
-    }
-    </style>
-
-<main>
-
+  <main>
   <div id="myCarousel" class="carousel slide">
     
-   <div class="carousel-inner" Id="main-carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+   <div class="carousel-inner" id="main-carousel-inner">
+    <!--  <div class="carousel-item active">
+      <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-  
-
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      </div>-->
+     
+   <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
@@ -74,6 +31,7 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+  </div>
   </div>
 <!-- FOOTER -->
 <footer>
@@ -106,12 +64,14 @@
 </main>
 
 <template id="template-carousel-item">
-  <div class="carousel-item">
+  
+  <div class="carousel-item" data-ride="carousel">
+  
     <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
     <div class="container">
       <div class="carousel-caption text-start">
-        <h1>Example headline.</h1>
+        <h1>Example headline</h1>
       </div>
     </div>
   </div>
@@ -119,9 +79,9 @@
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-var myArr = ["carrot", "beetroot","cauliflower", "eggplant", "potato"];
+  var myArr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
-function showContent() {
+function showContent(){
   var temp, item, a, i;
   temp = document.getElementById("template-carousel-item");
   //get the div element from the template:
@@ -138,8 +98,11 @@ function showContent() {
     document.getElementById("main-carousel-inner").appendChild(a);//main-carousel-inner
   }
 }
+
 showContent();
 const carousel = new bootstrap.Carousel('#myCarousel')
+
+document.querySelector(".carousel-item").classList.add("active")
 </script>
 
     
