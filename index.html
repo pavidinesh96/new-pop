@@ -11,7 +11,10 @@
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
 <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="carousel.css" rel="stylesheet">
 <link href="style9.css" rel="stylesheet">
+</head>
 </head>
 <body>
   <main>
@@ -67,11 +70,12 @@
   
   <div class="carousel-item" data-ride="carousel">
   
-    <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-
+   <!--<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+  -->
     <div class="container">
-      <div class="carousel-caption text-start">
-        <h1>Example headline</h1>
+      <div class="carousel-caption text-center">
+        
+        <span class="item-headline"></span>
       </div>
     </div>
   </div>
@@ -79,9 +83,11 @@
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  var myArr=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-
-function showContent(){
+  var eng=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+//var tamilLetter=[அ , ஆ , இ , ஈ , உ , ஊ , எ , ஏ , ஐ , ஒ , ஓ , ஔ , ஃ]
+var tamilLetter="அ,ஆ,இ,ஈ,உ,ஊ,எ,ஏ,ஐ,ஒ,ஓ,ஔ,ஃ";
+var tla=tamilLetter.split(",");
+function showContent(myArr){
   var temp, item, a, i;
   temp = document.getElementById("template-carousel-item");
   //get the div element from the template:
@@ -90,7 +96,7 @@ function showContent(){
   for (i = 0; i < myArr.length; i++) {
     //Create a new node, based on the template:
     a = document.importNode(item, true);
-    var b=a.getElementsByTagName("h1");
+    var b=a.getElementsByTagName("span");
     b[0].innerText= myArr[i];
     //Add data from the array:
     //a.textContent += myArr[i];
@@ -99,7 +105,7 @@ function showContent(){
   }
 }
 
-showContent();
+showContent(tla);
 const carousel = new bootstrap.Carousel('#myCarousel')
 
 document.querySelector(".carousel-item").classList.add("active")

@@ -5,7 +5,7 @@
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color:palevioletred;
+  color: #5a5a5a;
 }
 
 
@@ -17,7 +17,7 @@ body {
   margin-bottom: 4rem;
 }
 /* Since positioning the image, we need to help out the caption */
-.carousel-caption  {
+.carousel-caption {
   bottom: 3rem;
   z-index: 10;
 }
@@ -71,7 +71,7 @@ body {
   }
 
   .featurette-heading {
-    font-size: 90px;
+    font-size: 50px;
   }
 }
 
@@ -79,21 +79,4 @@ body {
   .featurette-heading {
     margin-top: 7rem;
   }
-}
-.full-screen { 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-body{
-  color:whitesmoke;
-  background-color: black;
-
-}
-.item-headline {
-  text-align: center;
-   vertical-align: middle;
-
-   font-size: 10rem;
 }
