@@ -25,6 +25,10 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
       </div>-->
+      <audio  autoplay>
+        <source src="C:\workspace\new-pop\audio/c.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
      
    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -71,11 +75,12 @@
   <div class="carousel-item" data-ride="carousel">
   
    <!--<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-  -->
+   -->
     <div class="container">
       <div class="carousel-caption text-center">
+        <h1 class="Example-headline"></h1>
         
-        <span class="item-headline"></span>
+       <!-- <span class="item-headline"></span>-->
       </div>
     </div>
   </div>
@@ -83,11 +88,11 @@
 <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  var eng=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  var myArr=["A","Apple","B","Ball","C","Camel","D","Duck","E","Elephant","F","Frog","G","Grapes","H","House","I","Ice Cream","J","Jacket","K","Kangaroo","L","Leaf","M","Moon","N","Nest","O","Orange","P","Penguin","Q","Queen","R","Rabbit","S","Star","T","Tree","U","Unicorn","V","Violin","W","Wheel","X","Xylophone","Y","Yarn","Z","Zebra"];
 //var tamilLetter=[அ , ஆ , இ , ஈ , உ , ஊ , எ , ஏ , ஐ , ஒ , ஓ , ஔ , ஃ]
-var tamilLetter="அ,ஆ,இ,ஈ,உ,ஊ,எ,ஏ,ஐ,ஒ,ஓ,ஔ,ஃ";
-var tla=tamilLetter.split(",");
-function showContent(myArr){
+//var tamilLetter="அ,ஆ,இ,ஈ,உ,ஊ,எ,ஏ,ஐ,ஒ,ஓ,ஔ,ஃ";
+//var tla=tamilLetter.split(",");
+function showContent(){
   var temp, item, a, i;
   temp = document.getElementById("template-carousel-item");
   //get the div element from the template:
@@ -96,7 +101,7 @@ function showContent(myArr){
   for (i = 0; i < myArr.length; i++) {
     //Create a new node, based on the template:
     a = document.importNode(item, true);
-    var b=a.getElementsByTagName("span");
+    var b=a.getElementsByTagName("h1");
     b[0].innerText= myArr[i];
     //Add data from the array:
     //a.textContent += myArr[i];
@@ -105,7 +110,7 @@ function showContent(myArr){
   }
 }
 
-showContent(tla);
+showContent();
 const carousel = new bootstrap.Carousel('#myCarousel')
 
 document.querySelector(".carousel-item").classList.add("active")

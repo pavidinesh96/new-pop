@@ -91,7 +91,9 @@ body{
   background-color: black;
 
 }
-.item-headline {
+/*.item-headline */
+
+ .Example-headline{
   text-align: center;
    vertical-align: middle;
 
