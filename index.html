@@ -17,6 +17,10 @@
 </head>
 </head>
 <body>
+  <audio  controls autoplay>
+    <source src="audio/Learn-English-Online-The-English-Alphabet-ABC-Pronunciation-female.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
   <main>
   <div id="myCarousel" class="carousel slide">
     
@@ -25,10 +29,7 @@
       <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
 
       </div>-->
-      <audio  autoplay>
-        <source src="C:\workspace\new-pop\audio/c.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
+      
      
    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -103,6 +104,9 @@ function showContent(){
     a = document.importNode(item, true);
     var b=a.getElementsByTagName("h1");
     b[0].innerText= myArr[i];
+    addEventListener('click', function(event){ 
+      console.log('carousel-item Clicked:'+ myArr[i]); });
+ 
     //Add data from the array:
     //a.textContent += myArr[i];
     //append the new node wherever you like:
@@ -115,6 +119,7 @@ const carousel = new bootstrap.Carousel('#myCarousel')
 
 document.querySelector(".carousel-item").classList.add("active")
 </script>
+<script>console.log("book")</script>
 
     
       
