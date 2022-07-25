@@ -79,7 +79,9 @@
    -->
     <div class="container">
       <div class="carousel-caption text-center">
+        <img class="carousel-image">
         <h1 class="Example-headline"></h1>
+
         
        <!-- <span class="item-headline"></span>-->
       </div>
@@ -102,10 +104,12 @@ function showContent(){
   for (i = 0; i < myArr.length; i++) {
     //Create a new node, based on the template:
     a = document.importNode(item, true);
+    a.setAttribute()
     var b=a.getElementsByTagName("h1");
     b[0].innerText= myArr[i];
-    addEventListener('click', function(event){ 
-      console.log('carousel-item Clicked:'+ myArr[i]); });
+   a.addEventListener('click', function(event){ 
+  
+    console.log('carousel-item Clicked:'+ event.target); });
  
     //Add data from the array:
     //a.textContent += myArr[i];
@@ -113,7 +117,17 @@ function showContent(){
     document.getElementById("main-carousel-inner").appendChild(a);//main-carousel-inner
   }
 }
-
+var worsconfig=
+{
+"apple": {
+    "audio": "apple.mp3",
+    "img":"apple.jpeg"
+},
+"ball": {
+       "audio": "ball.mp3",
+       "img": "ball.jpeg"
+}
+}
 showContent();
 const carousel = new bootstrap.Carousel('#myCarousel')
 
